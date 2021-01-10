@@ -1,11 +1,7 @@
 import cv2
 
 thres = 0.45 # Threshold to detect object
-
-cap = cv2.VideoCapture(1)
-cap.set(3,1280)
-cap.set(4,720)
-cap.set(10,70)
+img = cv2.imread('mrc.jpg')
 
 classNames= []
 classFile = 'coco.names'
