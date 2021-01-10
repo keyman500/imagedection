@@ -37,11 +37,3 @@ class analyze_image:
             cv2.putText(self.image,self.classNames[classId-1],(box[0]+10,box[1]+30),cv2.FONT_HERSHEY_COMPLEX,1,(0,255,0),2)
             print(self.classNames[classId-1])
         self.outputImg()
-
-a = analyze_image("mrc.jpg","ouput.png")
-a.analyze()
-
-
-
-
-    
