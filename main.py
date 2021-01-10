@@ -17,9 +17,6 @@ class analyze_image:
         cv2.imshow("Output",self.image)
         cv2.waitKey(0)
 
-    def outputImg(self):
-        cv2.imwrite(self.outputfile,self.image)
-
     def createnet(self):
         net = cv2.dnn_DetectionModel('ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt','frozen_inference_graph.pb')
         net.setInputSize(320,320)
@@ -36,4 +33,4 @@ class analyze_image:
             cv2.rectangle(self.image,box,color=(0,255,0),thickness=2)
             cv2.putText(self.image,self.classNames[classId-1],(box[0]+10,box[1]+30),cv2.FONT_HERSHEY_COMPLEX,1,(0,255,0),2)
             print(self.classNames[classId-1])
-        self.outputImg()
+        cv2.imwrite(self.outputfile,self.image)
