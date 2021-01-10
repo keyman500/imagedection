@@ -6,3 +6,5 @@ openCV can be installed by using pip install opencv-python
 
 after an instance of the analyze-image is created only the method analyze needs too be called and 
 it will print all objects decteted and create a new image called output.png with the rectangles drawn.
+
+The show image method can be used too display the image on the screen at any time.
