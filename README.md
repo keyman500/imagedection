@@ -1,4 +1,4 @@
-# imagedection
+# Obejct Detection
 
 This is a python program that uses openCV to analyze images and dectect objects found and draw a rectange around them.
 
